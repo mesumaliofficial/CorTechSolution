@@ -1,31 +1,89 @@
-import Image from "next/image";
-import logo from "../../public/images/logo.svg"
 import Link from "next/link";
-import { UserRoundPen } from 'lucide-react';
+import { FaTwitter, FaFacebookF, FaLinkedinIn, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
 
 const Navbar = () => {
     return (
-        <nav className="lg:flex justify-between items-center bg-gray-100 shadow-lg px-8">
-            <div className="px-4">
-                <Link href="/">
-                    <Image src={logo} alt="CorTech Solution" className="w-full h-[80px]" />
-                </Link>
+        <>
+            {/* Topbar with contact info and social icons */}
+            <div className="Topbar flex bg-[#182145] justify-between items-center px-6">
+                <ul className="flex items-center gap-8 text-white">
+                    <li className="border-r border-white px-6 py-1.5">+92-3312096750</li>
+                    <li className="border-r border-white pr-5 py-1.5">syedmesumjaffary@gmail.com</li>
+                </ul>
+
+                {/* Social Icons */}
+                <ul className="flex items-center gap-4">
+                    <li className="border-l border-white p-2">
+                        <Link href="https://twitter.com">
+                            <FaTwitter size={20} className="text-white hover:text-blue-500 transition-colors" />
+                        </Link>
+                    </li>
+                    <li className="border-l border-white p-2">
+                        <Link href="https://facebook.com">
+                            <FaFacebookF size={20} className="text-white hover:text-blue-600 transition-colors" />
+                        </Link>
+                    </li>
+                    <li className="border-l border-white p-2">
+                        <Link href="https://linkedin.com">
+                            <FaLinkedinIn size={20} className="text-white hover:text-blue-700 transition-colors" />
+                        </Link>
+                    </li>
+                    <li className="border-l border-white p-2">
+                        <Link href="https://instagram.com">
+                            <FaInstagram size={20} className="text-white hover:text-pink-500 transition-colors" />
+                        </Link>
+                    </li>
+                </ul>
+
             </div>
-            <ul className="lg:flex font-[500] text-[#333] text-lg space-x-8 items-center justify-center">
-                <li><Link href="/">Home</Link></li>
-                <li><Link href="/about">About</Link></li>
-                <li><Link href="/about">Servies</Link></li>
-                <li><Link href="/contact">Project</Link></li>
-                <li><Link href="/contact">Our Clients</Link></li>
-            </ul>
-            <div className="flex items-center justify-center">
-                <button className="font-[500] text-xl bg-[#182145] text-white py-2.5 px-8 flex items-center gap-2.5">
-                    Contact us
-                    <UserRoundPen className="text-white font-bold" size={20} />
-                </button>
-            </div>
-        </nav>
+
+            {/* Main Navigation Bar */}
+            <nav className="lg:flex justify-between items-center bg-white shadow-lg px-8 py-2">
+                <div className="px-4">
+                    <Link href="/">
+                        <img src="/images/logo.svg" alt="CorTech Solution" className="w-full h-[80px] object-contain" />
+                    </Link>
+                </div>
+
+                {/* Menu Items */}
+                <ul className="lg:flex font-medium text-[#333] text-lg space-x-8 items-center justify-center">
+                    <li>
+                        <Link href="/">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/about">
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/services">
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/projects">
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
+                        <Link href="/clients">
+                            Our Clients
+                        </Link>
+                    </li>
+                </ul>
+
+                {/* Contact Us Button */}
+                <div className="flex items-center justify-center">
+                    <button className="font-semibold text-xl bg-[#182145] text-white py-2.5 px-8 flex items-center gap-2.5 rounded-lg hover:bg-blue-700 transition-colors">
+                        Contact us
+                        <FaPhoneAlt className="text-white font-bold" size={20} />
+                    </button>
+                </div>
+            </nav>
+        </>
     );
-}
+};
 
 export default Navbar;
