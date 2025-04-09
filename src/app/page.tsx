@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="grid grid-cols-2 h-[90vh] justify-between p-16">
+      <main className="grid grid-cols-2 h-[90vh] justify-between p-16 bg-gray-200">
         <div className="text-black space-y-4 items-center justify-center flex flex-col">
           <h1 className="text-5xl font-bold text-gray-900">
             Redefining Your <span className="text-blue-500">Digital Future</span> with CorTech IT Solutions
@@ -16,7 +16,7 @@ export default function Home() {
         </div>
         <div 
           className="relative bg-cover bg-center h-full rounded-lg"
-          style={{ backgroundImage: "url('/images/banner.webp')" }}
+          style={{ backgroundImage: "url('/images/banner1.png')" }}
         >
         </div>
       </main>
