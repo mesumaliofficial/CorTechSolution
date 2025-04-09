@@ -41,8 +41,8 @@ const Navbar = () => {
                 {/* Social Icons */}
                 <ul className="flex items-center gap-4">
                     {SocialIcons.map((item, index) => (
-                        <li className="border-l border-white py-2 pl-4 text-white">
-                            <Link key={index} href={item.link}>
+                        <li key={index} className="border-l border-white py-2 pl-4 text-white">
+                            <Link href={item.link}>
                                 {item.icon}
                             </Link>
                         </li>
