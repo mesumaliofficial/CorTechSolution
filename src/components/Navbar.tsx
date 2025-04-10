@@ -51,7 +51,7 @@ const Navbar = () => {
             </div>
 
             {/* Main Navigation Bar */}
-            <nav className="relative bg-white shadow-lg px-0 lg:px-8 py-2 lg:flex justify-between items-center">
+            <nav className="relative bg-white shadow-lg px-0 lg:px-12 py-2 lg:flex justify-between items-center">
                 <div className="flex items-center justify-between">
                     <Link href="/">
                         <img
